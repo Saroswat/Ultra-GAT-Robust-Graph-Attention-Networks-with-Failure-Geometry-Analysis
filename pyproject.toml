@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ultra-gat"
+version = "0.1.0"
+description = "A reproducible lab for graph attention robustness, uncertainty, and failure geometry."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "Saroswat Roy" }]
+keywords = ["graph-neural-networks", "graph-attention", "pytorch-geometric", "robustness", "explainable-ai"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "plotly>=5.20",
+  "pyyaml>=6.0",
+  "scikit-learn>=1.4",
+  "streamlit>=1.35",
+  "torch>=2.2",
+  "torch-geometric>=2.5",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.5"]
+
+[project.scripts]
+ultragat = "ultragat.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis"
+Repository = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis"
+Issues = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ultragat"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
