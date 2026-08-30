@@ -7,6 +7,8 @@
 [![PyTorch Geometric](https://img.shields.io/badge/PyTorch_Geometric-2.5+-EE4C2C.svg)](https://pyg.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL_v3-blue.svg)](LICENSE)
 
+**[Launch the public Ultra-GAT Lab](https://ultra-gat-lab.saroswat.chatgpt.site)**
+
 Ultra-GAT turns a large exploratory Graph Attention Network notebook into a package that other people
 can install, benchmark, inspect, and extend. It compares GCN, GAT, and GATv2 under one protocol, then
 goes beyond clean accuracy to reveal how each model fails when graph structure or node features are
@@ -39,6 +41,12 @@ The first run downloads the selected Planetoid dataset. A checkpoint and JSON re
 `artifacts/`.
 
 ## Interactive lab
+
+The fastest way to explore the project is the
+[public browser lab](https://ultra-gat-lab.saroswat.chatgpt.site). It runs live message passing,
+edge deletion, feature masking, node inspection, and result export without an account or local setup.
+
+For the full PyTorch Geometric workspace locally:
 
 ```bash
 uv run streamlit run app.py

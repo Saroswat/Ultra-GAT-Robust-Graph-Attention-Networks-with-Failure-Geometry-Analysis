@@ -39,7 +39,7 @@ dev = ["pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.5"]
 ultragat = "ultragat.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis"
+Homepage = "https://ultra-gat-lab.saroswat.chatgpt.site"
 Repository = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis"
 Issues = "https://github.com/Saroswat/Ultra-GAT-Robust-Graph-Attention-Networks-with-Failure-Geometry-Analysis/issues"
 
